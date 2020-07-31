@@ -12,7 +12,7 @@ import org.testng.Assert;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class _05_CitiesSteps {
+public class _06_CitiesSteps {
     WebDriver driver;
     ReusableMethod method = new ReusableMethod();
     @Given("^Navigate to cities page$")

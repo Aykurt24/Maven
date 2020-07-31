@@ -4,17 +4,20 @@ import PageObjectModel.DialogContent;
 import PageObjectModel.LeftNavElements;
 import Utilities.Driver;
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 
 public class _04_CountriesSteps {
+
     WebDriver driver;
 
     LeftNavElements leftNavElements = new LeftNavElements();
     DialogContent dialogContent = new DialogContent();
+
 
     @And("^Navigate to countries page$")
     public void navigate_to_countries_page(){
@@ -25,23 +28,27 @@ public class _04_CountriesSteps {
 
     }
 
-    @Then("^User create a country$")
-    public void user_create_a_country()  {
+    @When("^User create a country$")
+    public void user_create_a_country(){
 
-        dialogContent.findElementAndClickFunction("addButton");
+        dialogContent.findElementAndClickFunction("AddButton");
+        dialogContent.findElementAndSendKeysFunction("NameInput" , "AliCountry");
+        dialogContent.findElementAndSendKeysFunction("CodeInput" , "a1");
+        dialogContent.findElementAndClickFunction("SaveButton");
 
-//        WebElement addCountryButton = driver.findElement(By.cssSelector(" ms-add-button > div > button"));
-//        addCountryButton.click();
-
-        WebElement countryName = driver.findElement(By.cssSelector("#ms-text-field-2>input"));
-        countryName.sendKeys("Tanzania");
-
-        WebElement countryCode = driver.findElement(By.cssSelector("#ms-text-field-3>input"));
-        countryCode.sendKeys("TZ");
-
-        WebElement saveButton = driver.findElement(By.cssSelector(" ms-save-button > button"));
-        saveButton.click();
     }
 
+    @When("^User create a country name as \"([^\"]*)\" code as \"([^\"]*)\"$")
+    public void user_create_a_country_name_as_code_as(String name, String code)  {
 
+        dialogContent.findElementAndClickFunction("AddButton");
+        dialogContent.findElementAndSendKeysFunction("NameInput" , name);
+        dialogContent.findElementAndSendKeysFunction("CodeInput" , code);
+        dialogContent.findElementAndClickFunction("SaveButton");
+    }
+
+    @Then("^Success message should be displayed$")
+    public void success_message_should_be_displayed() {
+        dialogContent.findElementAndVerifyElementContainText("SuccessfullyMessage" , "successfully");
+    }
 }

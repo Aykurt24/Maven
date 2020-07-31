@@ -1,6 +1,7 @@
 package PageObjectModel;
 
 import Utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -24,6 +25,7 @@ public class LeftNavElements extends _01_ParentClass{
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
+
     @FindBy(xpath = "(//span[text()='Setup'])[1]")
     private WebElement Setup1Button;
 
@@ -32,6 +34,10 @@ public class LeftNavElements extends _01_ParentClass{
 
     @FindBy(xpath = "//span[text()='Countries']")
     private WebElement CountriesButton;
+
+    @FindBy(xpath = "//span[text()='Nationalities']")
+    private WebElement Nationalities;
+
 
     /*
         We can create couple methods which is finding the element in the class
@@ -52,6 +58,9 @@ public class LeftNavElements extends _01_ParentClass{
                 break;
             case "CountriesButton":
                 myElement =CountriesButton;
+                break;
+            case "Nationalities":
+                myElement =Nationalities;
                 break;
 
         }
