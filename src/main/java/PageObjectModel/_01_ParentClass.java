@@ -58,4 +58,11 @@ public class _01_ParentClass {
         Assert.assertTrue(element.getText().contains(myText));
     }
 
+    public void waiting(int howLong){
+        try {
+            Thread.sleep(howLong);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }
