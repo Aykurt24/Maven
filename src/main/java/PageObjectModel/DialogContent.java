@@ -1,5 +1,4 @@
 package PageObjectModel;
-
 import Utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -26,11 +25,35 @@ public class DialogContent extends _01_ParentClass{
     @FindBy(xpath = "//ms-text-field[@formcontrolname='code']/input")
     private WebElement CodeInput;
 
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='priority']/input")
+    private WebElement PriorityInput;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='shortName']/input")
+    private WebElement shortNameInput;
+
+    @FindBy(xpath = "//input[@class='mat-autocomplete-trigger mat-chip-input mat-input-element']")
+    private WebElement UserTypeDropdown;
+
+    @FindBy(xpath = " (//span[@class='mat-option-text'][text()=' Everyone '])[1]")
+    private WebElement everyoneUserOption;
+
+    @FindBy(xpath = "//span[@class='mat-option-text']")
+    private List<WebElement> userTypeAllOptions;
+
+    @FindBy(xpath = "//ms-text-field[@formcontrolname='budgetAccountIntegrationCode']/input")
+    private WebElement IntegrationCode;
+
     @FindBy(css = "ms-save-button>button")
     private WebElement SaveButton;
 
     @FindBy(xpath = "//div[contains(text(),'successfully')]")
     private WebElement SuccessfullyMessage;
+
+    @FindBy(xpath = "//div[contains(text(),'Error')]")
+    private WebElement ErrorMessage;
+
+    @FindBy(xpath = "//button[@aria-label='Close dialog']")
+    private WebElement closeDialog;
 
     @FindBy(xpath = "//button[@type='submit']")
     private WebElement yesButton;
@@ -38,7 +61,6 @@ public class DialogContent extends _01_ParentClass{
 //    //table/tbody/tr/td[2]
 //        tr is a row of the table and td is a colomn of the table
 //         //table/tbody/tr[5]/td[2] row 5 column 2
-
 
     @FindAll({
             @FindBy(xpath = "//table/tbody/tr/td[2]")
@@ -71,6 +93,17 @@ public class DialogContent extends _01_ParentClass{
             case "yesButton":
                 myElement = yesButton;
                 break;
+            case "closeDialog":
+                myElement = closeDialog;
+                break;
+            case "UserTypeDropdown":
+                myElement = UserTypeDropdown;
+                break;
+            case "everyoneUserOption":
+                myElement = everyoneUserOption;
+                break;
+
+
 
         }
 
@@ -88,6 +121,16 @@ public class DialogContent extends _01_ParentClass{
             case "CodeInput":
                 myElement = CodeInput;
                 break;
+            case "IntegrationCode":
+                myElement = IntegrationCode;
+                break;
+            case "PriorityInput":
+                myElement = PriorityInput;
+                break;
+            case "shortNameInput":
+                myElement = shortNameInput;
+                break;
+
         }
 //            Create a method in parentClass which is going to wait first and sendKeys
         sendKeysFunction(myElement , value);
@@ -101,6 +144,9 @@ public class DialogContent extends _01_ParentClass{
 
             case "SuccessfullyMessage":
                 myElement=SuccessfullyMessage;
+                break;
+            case "ErrorMessage":
+                myElement=ErrorMessage;
                 break;
 
         }
@@ -133,6 +179,20 @@ public class DialogContent extends _01_ParentClass{
 
             }
         }
+    }
+
+    public void clickOnElementInTheDropdown(String whichOption){
+
+        for(int i = 0 ; i<userTypeAllOptions.size() ; i++){
+
+            if(userTypeAllOptions.get(i).getText().contains(whichOption)){
+
+                userTypeAllOptions.get(i).click();
+                break;
+            }
+
+        }
+
     }
 }
 

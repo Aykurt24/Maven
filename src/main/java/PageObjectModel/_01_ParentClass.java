@@ -27,6 +27,7 @@ public class _01_ParentClass {
 
         waitUntilClickable(element);
         element.click();
+
     }
 
     //    Send keys function
@@ -42,6 +43,7 @@ public class _01_ParentClass {
     public void waitUntilVisible(WebElement elementToWait){
 
         wait.until(ExpectedConditions.visibilityOf(elementToWait));
+
     }
 
 
@@ -65,4 +67,5 @@ public class _01_ParentClass {
             e.printStackTrace();
         }
     }
+
 }

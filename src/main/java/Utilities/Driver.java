@@ -30,8 +30,20 @@ public class Driver {
         }
 
         return driver;
+
     }
 
 
+    /*
+        We are going to call this method after each scenario.
+     */
+    public static void QuitDriver(){
 
+        if(driver!=null){
+            driver.quit();
+            driver=null; // if we dont type this line next scenario will fail
+        }
+    }
+
+//    do we need instead of void "Webdriver"
 }
