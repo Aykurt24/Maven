@@ -3,7 +3,7 @@ import PageObjectModel.DialogContent;
 import PageObjectModel._01_ParentClass;
 import cucumber.api.java.en.When;
 
-public class _06_CreateEditDeleteCountry {
+public class _06_CreateEditDeleteCountry extends _01_ParentClass{
 
     DialogContent dialogContent = new DialogContent();
 
@@ -20,6 +20,7 @@ public class _06_CreateEditDeleteCountry {
     @When("^User delete the \"([^\"]*)\"$")
     public void user_delete_the(String nameOfCountryToDelete){
 
+        waiting(3000);
         dialogContent.editAndDeleteFunction(nameOfCountryToDelete , "delete");
         dialogContent.findElementAndClickFunction("yesButton");
 
