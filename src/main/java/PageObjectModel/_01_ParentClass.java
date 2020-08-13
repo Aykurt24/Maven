@@ -1,6 +1,7 @@
 package PageObjectModel;
 
 import Utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -50,6 +51,7 @@ public class _01_ParentClass {
     //    WaitForClickable
     public void waitUntilClickable(WebElement elmentToWait){
 
+//        wait until clickable is working as if the element is not visible
         wait.until(ExpectedConditions.elementToBeClickable(elmentToWait));
     }
 

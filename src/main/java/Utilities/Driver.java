@@ -3,6 +3,7 @@ package Utilities;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver {
 
@@ -25,7 +26,9 @@ public class Driver {
 
 //        if the driver is == null then create a driver if not then give me current driver
         if(driver==null){
-            WebDriverManager.chromedriver().setup(); // this line is for System.setproperty
+              WebDriverManager.chromedriver().setup();
+//            WebDriverManager.firefoxdriver().setup(); // this line is for System.setproperty
+//            driver = new FirefoxDriver();
             driver = new ChromeDriver();
         }
 
@@ -41,7 +44,8 @@ public class Driver {
 
         if(driver!=null){
             driver.quit();
-            driver=null; // if we dont type this line next scenario will fail
+            driver=null;
+ //if we dont type this line next scenario will fail
         }
     }
 

@@ -7,4 +7,3 @@ Feature: Login to basqar
     Then User should login successfully
 
 
-
