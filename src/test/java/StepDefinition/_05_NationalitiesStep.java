@@ -1,9 +1,8 @@
-package stepdefination;
+package StepDefinition;
 
 import PageObjectModel.DialogContent;
 import PageObjectModel.LeftNavElements;
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.When;
 
 public class _05_NationalitiesStep {

@@ -1,7 +1,6 @@
 Feature: Fees functionality
 
-
-  #    These tags are coming from the runner class and runner is finding which scenario to run with these tags
+#    These tags are coming from the runner class and runner is finding which scenario to run with these tags
 
   Scenario: Create a Fees
 
@@ -74,6 +73,7 @@ Feature: Fees functionality
 
 #     With a scenario outline we are able to run our code with multiple data
 
+  @E2E
   Scenario Outline:Edit multiple fees in Scenario outline
 
     Given Navigate to basqar
@@ -95,7 +95,7 @@ Feature: Fees functionality
     Then Success message should be displayed
     Examples:
       | FeeName1 | FeeCode1 | FeeIntegration1 | FeePriority1 | FeeNameEditted1 | FeeName2   | FeeCode2 | FeeIntegration2 | FeePriority2 |
-      | AliName  | 123      | 123             | 123          | AliNameEditted  | FurkatName | 1234     | 1234            | 1234         |
-      | doganFee | 123      | 123             | 123          | DoganEditted    | EkremFee   | 1234     | 1234            | 1234         |
+      | D.A      | 1234567  | 123098          | 12378677     | D.A.E           | DOM.F      | 1234656  | 12345234        |  1234434     |
+      | DGN      | 123098   | 1236765         | 123          | DGN.E           | FOOD.F     | 12348765 | 1234534         | 123443       |
 
 

@@ -1,4 +1,4 @@
-package stepdefination;
+package StepDefinition;
 
         import PageObjectModel.DialogContent;
         import PageObjectModel.LeftNavElements;

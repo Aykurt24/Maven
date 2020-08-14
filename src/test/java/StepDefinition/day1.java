@@ -1,9 +1,8 @@
-package stepdefination;
+package StepDefinition;
 
 import cucumber.api.java.en.Given;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.testng.annotations.Parameters;
 
 import java.util.ArrayList;
 import java.util.List;

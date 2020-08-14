@@ -1,8 +1,7 @@
-package stepdefination;
+package StepDefinition;
 
 import PageObjectModel.DialogContent;
 import PageObjectModel.LeftNavElements;
-import PageObjectModel._01_ParentClass;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.But;
 import cucumber.api.java.en.Then;

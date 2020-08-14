@@ -1,13 +1,9 @@
-package stepdefination;
+package StepDefinition;
 
 import PageObjectModel.DialogContent;
 import PageObjectModel.LeftNavElements;
-import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-
-import java.util.List;
 
 public class _07_Fees {
 

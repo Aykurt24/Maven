@@ -1,6 +1,4 @@
-package stepdefination;
-
-import cucumber.api.java.en.Given;
+package StepDefinition;
 
 public class _01_LoginSteps {
 

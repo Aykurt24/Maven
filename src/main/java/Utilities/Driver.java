@@ -1,9 +1,9 @@
 package Utilities;
 
+import cucumber.api.java.After;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver {
 
@@ -26,9 +26,7 @@ public class Driver {
 
 //        if the driver is == null then create a driver if not then give me current driver
         if(driver==null){
-              WebDriverManager.chromedriver().setup();
-//            WebDriverManager.firefoxdriver().setup(); // this line is for System.setproperty
-//            driver = new FirefoxDriver();
+            WebDriverManager.chromedriver().setup(); // this line is for System.setproperty
             driver = new ChromeDriver();
         }
 
@@ -37,15 +35,16 @@ public class Driver {
     }
 
 
+
     /*
         We are going to call this method after each scenario.
      */
+
     public static void QuitDriver(){
 
         if(driver!=null){
             driver.quit();
-            driver=null;
- //if we dont type this line next scenario will fail
+            driver=null; // if we dont type this line next scenario will fail error is NoSuchSessionException
         }
     }
 

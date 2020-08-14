@@ -1,7 +1,6 @@
-package stepdefination;
+package StepDefinition;
 
 import PageObjectModel.DialogContent;
-import PageObjectModel._01_ParentClass;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;

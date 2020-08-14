@@ -161,7 +161,7 @@ public class StudentClass extends _01_ParentClass{
     public void options (String x){
 
             WebElement Option1 = driver.findElement(By.xpath("(//mat-option)"+"["+x+"]"));
-        Option1.click();
+            Option1.click();
 
     }
 

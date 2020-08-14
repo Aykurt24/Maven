@@ -1,8 +1,7 @@
-package stepdefination;
+package StepDefinition;
 
 import PageObjectModel.DialogContent;
 import PageObjectModel.LeftNavElements;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.When;
 

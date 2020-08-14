@@ -1,7 +1,6 @@
 package Runners;
 
-
-    /*
+/*
         Runners are helping us to run multiple feature files in the same time.
      */
 
@@ -34,5 +33,4 @@ public class _02_SmokeTestRunnerWithTag extends AbstractTestNGCucumberTests {
                         Application is up and running.
                 Regression test: Is running before every release. It is making sure every functionality
                         is working as expected.
-
      */

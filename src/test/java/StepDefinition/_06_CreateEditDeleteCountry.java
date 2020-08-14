@@ -1,4 +1,4 @@
-package stepdefination;
+package StepDefinition;
 import PageObjectModel.DialogContent;
 import PageObjectModel._01_ParentClass;
 import cucumber.api.java.en.When;

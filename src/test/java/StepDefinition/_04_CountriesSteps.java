@@ -1,13 +1,11 @@
-package stepdefination;
+package StepDefinition;
 
 import PageObjectModel.DialogContent;
 import PageObjectModel.LeftNavElements;
-import Utilities.Driver;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 

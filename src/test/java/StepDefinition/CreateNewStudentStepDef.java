@@ -1,4 +1,4 @@
-package stepdefination;
+package StepDefinition;
 
 import PageObjectModel.DialogContent;
 import PageObjectModel.StudentClass;
@@ -7,7 +7,6 @@ import cucumber.api.java.en.But;
 import cucumber.api.java.en.When;
 
 import java.util.List;
-import java.util.Random;
 
 public class CreateNewStudentStepDef {
 
